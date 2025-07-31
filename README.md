@@ -5,8 +5,26 @@
 [![License](https://img.shields.io/badge/license-GPLv2-red.svg)](https://www.gnu.org/licenses/gpl-2.0.html)
 [![PHP](https://img.shields.io/badge/PHP-7.4%2B-purple.svg)](https://php.net)
 [![WordPress](https://img.shields.io/badge/WordPress-5.0%2B-blue.svg)](https://wordpress.org)
+[![Kiro IDE](https://img.shields.io/badge/Built%20with-Kiro%20IDE-orange.svg)](https://kiro.ai)
 
 Smart translation system with Google Translate API-based customizable translation plugin for WordPress sites.
+
+## 🚀 Developed with Kiro IDE
+
+This plugin was developed using the revolutionary **Kiro IDE** - the next-generation AI-powered development environment that transforms how developers build software. Kiro IDE's intelligent agent system and autonomous coding capabilities made the development process incredibly efficient and innovative.
+
+### 🤖 Kiro IDE Agent Hooks in Action
+
+During the development of HK Translate, Kiro IDE's powerful **Agent Hooks** system played a crucial role in automating repetitive tasks and maintaining code quality:
+
+- **Automatic TODO Management**: When code changes were made, Kiro automatically updated and managed the TODO list, ensuring no tasks were forgotten
+- **WordPress Settings Auto-Configuration**: After each modification, the JavaScript structure in WordPress settings was automatically optimized and configured
+- **README Auto-Updates**: Documentation was automatically maintained and updated as features were added or modified
+- **Code Quality Assurance**: Automatic code reviews and optimizations were performed after each significant change
+
+The Agent Hooks system in Kiro IDE was instrumental in generating new ideas and maintaining development momentum. It's like having an intelligent development partner that never sleeps!
+
+**🎯 [Live Demo](https://huseyinkurklu.com.tr/)** - See HK Translate in action!
 
 ## ⭐ Next-Generation Features
 
@@ -157,17 +175,33 @@ Yes! You can reorder languages using the intuitive drag-and-drop interface in th
 Yes, it's compatible with popular caching plugins like WP Rocket, W3 Total Cache, WP Super Cache.
 </details>
 
-## 🖼️ Screenshots
+## 🖼️ Screenshots & Preview
 
-1. **Admin Panel Main Page** - Language selection and smart detection settings
-2. **Position Settings** - 6 different position options and device-based settings
-3. **Visual Customization** - Color palette and style settings
-4. **Real-time Preview** - See changes instantly
-5. **Language Ordering** - Drag & drop language reordering interface
-6. **Frontend Translation Button** - Desktop view
-7. **Open Translation Menu** - Flagged language list
-8. **Mobile Responsive Design** - Tablet and phone view
-9. **Admin Menu Badge** - Active language count indicator
+### Plugin Interface Preview
+
+![HK Translate Screenshot 1](https://huseyinkurklu.com.tr/wp-content/uploads/2025/08/hktranslate-1.png)
+_Admin Panel Main Page - Language selection and smart detection settings_
+
+![HK Translate Screenshot 2](https://huseyinkurklu.com.tr/wp-content/uploads/2025/08/hk-translate-2.png)
+_Position Settings - 6 different position options and device-based settings_
+
+![HK Translate Screenshot 3](https://huseyinkurklu.com.tr/wp-content/uploads/2025/08/hk-translate-3.png)
+_Visual Customization - Color palette and style settings_
+
+![HK Translate Screenshot 4](https://huseyinkurklu.com.tr/wp-content/uploads/2025/08/hk-translate-4.png)
+_Real-time Preview - See changes instantly_
+
+![HK Translate Screenshot 5](https://huseyinkurklu.com.tr/wp-content/uploads/2025/08/hk-translate-5.png)
+_Language Ordering - Drag & drop language reordering interface_
+
+![HK Translate Screenshot 6](https://huseyinkurklu.com.tr/wp-content/uploads/2025/08/hk-translate-6.png)
+_Frontend Translation Button - Desktop view_
+
+![HK Translate Screenshot 7](https://huseyinkurklu.com.tr/wp-content/uploads/2025/08/hk-translate-7.png)
+_Open Translation Menu - Flagged language list_
+
+![HK Translate Screenshot 8](https://huseyinkurklu.com.tr/wp-content/uploads/2025/08/hk-translate-8.png)
+_Mobile Responsive Design - Tablet and phone view_
 
 ## 📋 Technical Requirements
 
@@ -247,13 +281,31 @@ This plugin uses Google Translate Widget API. During translation, page content i
 - Minimum resource usage
 - Caching compatibility
 
+## 👨‍💻 About the Developer
+
+**Hüseyin Kürklü** - Digital Marketing Specialist & WordPress Developer
+
+I'm a passionate digital marketing and website designer specialist with extensive experience in WordPress theme development and SEO optimization. With a deep understanding of multilingual websites and international marketing strategies, I created HK Translate to solve real-world translation challenges that businesses face when expanding globally.
+
+My expertise spans across:
+
+- WordPress plugin development
+- Digital marketing strategies
+- SEO optimization for multilingual sites
+- User experience design
+- Performance optimization
+
+**🌐 Connect with me:**
+
+- Website: [huseyinkurklu.com.tr](https://huseyinkurklu.com.tr/)
+- Demo: [Live HK Translate Demo](https://huseyinkurklu.com.tr/)
+
 ## 🆘 Support
 
 **Support Channels:**
 
-- [WordPress.org Support Forum](https://wordpress.org/support/)
 - [GitHub Issues](https://github.com/huseyinkurklu/hk-translate/issues)
-- Email: support@hktranslate.com
+- Developer Website: [Hüseyin Kürklü](https://huseyinkurklu.com.tr/)
 
 **Documentation:**
 
