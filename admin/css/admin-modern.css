@@ -1,0 +1,555 @@
+/*
+ * Modern Premium Admin Panel Styles for HK Translate
+ * Author: GitHub Copilot
+ * Version: 1.0
+ * Description: Modern, clean, responsive, and premium look for plugin settings page
+ */
+
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1e40af;
+  --primary-light: #60a5fa;
+  --secondary: #f1f5f9;
+  --background: #f8fafc;
+  --card-bg: #fff;
+  --border: #e5e7eb;
+  --radius: 14px;
+  --shadow: 0 4px 24px 0 rgba(30, 64, 175, 0.07);
+  --text: #1e293b;
+  --text-light: #64748b;
+  --success: #22c55e;
+  --danger: #ef4444;
+  --warning: #f59e42;
+  --info: #0ea5e9;
+  --font: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+body.hk-translate-admin {
+  background: var(--background);
+  font-family: var(--font);
+  color: var(--text);
+}
+
+.wrap {
+  max-width: 900px;
+  margin: 40px auto 0 auto;
+  padding: 0 24px 48px 24px;
+}
+
+.hk-admin-section {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 32px;
+  padding: 32px 32px 24px 32px;
+  border: 1px solid var(--border);
+}
+
+.hk-admin-section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: var(--primary-dark);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hk-admin-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.hk-admin-tab {
+  background: var(--secondary);
+  border-radius: 8px 8px 0 0;
+  padding: 10px 24px;
+  font-weight: 600;
+  color: var(--text-light);
+  cursor: pointer;
+  border: 1px solid var(--border);
+  border-bottom: none;
+  transition: background 0.2s, color 0.2s;
+}
+.hk-admin-tab.active {
+  background: var(--card-bg);
+  color: var(--primary-dark);
+  border-bottom: 2px solid var(--primary);
+}
+
+.hk-admin-form-group {
+  margin-bottom: 24px;
+}
+
+.hk-admin-label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hk-admin-input,
+.hk-admin-select {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--secondary);
+  font-size: 1rem;
+  margin-top: 4px;
+  transition: border 0.2s;
+}
+.hk-admin-input:focus,
+.hk-admin-select:focus {
+  border: 1.5px solid var(--primary);
+  outline: none;
+}
+
+.hk-admin-switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 28px;
+}
+.hk-admin-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.hk-admin-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--border);
+  border-radius: 28px;
+  transition: background 0.2s;
+}
+.hk-admin-switch input:checked + .hk-admin-slider {
+  background: var(--primary);
+}
+.hk-admin-slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  bottom: 3px;
+  background: #fff;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+.hk-admin-switch input:checked + .hk-admin-slider:before {
+  transform: translateX(20px);
+}
+
+.hk-admin-btn {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 rgba(30, 64, 175, 0.08);
+  transition: background 0.2s, box-shadow 0.2s;
+  margin-right: 10px;
+}
+.hk-admin-btn:hover {
+  background: var(--primary-dark);
+  box-shadow: 0 4px 16px 0 rgba(30, 64, 175, 0.13);
+}
+
+.hk-admin-btn.secondary {
+  background: var(--secondary);
+  color: var(--primary-dark);
+  border: 1px solid var(--primary-light);
+}
+.hk-admin-btn.secondary:hover {
+  background: var(--primary-light);
+  color: #fff;
+}
+
+.hk-admin-tooltip {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+.hk-admin-tooltip .hk-admin-tooltip-text {
+  visibility: hidden;
+  width: 220px;
+  background: var(--primary-dark);
+  color: #fff;
+  text-align: left;
+  border-radius: 8px;
+  padding: 10px;
+  position: absolute;
+  z-index: 10;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -110px;
+  opacity: 0;
+  transition: opacity 0.2s;
+  font-size: 0.95rem;
+}
+.hk-admin-tooltip:hover .hk-admin-tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.hk-admin-card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+@media (max-width: 700px) {
+  .hk-admin-card-grid {
+    grid-template-columns: 1fr;
+  }
+  .hk-admin-section {
+    padding: 18px 8px 12px 8px;
+  }
+}
+
+.hk-admin-preview {
+  background: var(--secondary);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin-top: 24px;
+  box-shadow: 0 2px 8px 0 rgba(30, 64, 175, 0.04);
+  border: 1px solid var(--border);
+}
+
+.hk-admin-sticky-bar {
+  position: sticky;
+  bottom: 0;
+  background: var(--card-bg);
+  padding: 18px 0 0 0;
+  z-index: 20;
+  box-shadow: 0 -2px 12px 0 rgba(30, 64, 175, 0.04);
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.hk-admin-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 32px 0 24px 0;
+  border: none;
+}
+
+.hk-admin-info {
+  background: var(--info);
+  color: #fff;
+  border-radius: 8px;
+  padding: 12px 18px;
+  margin-bottom: 18px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hk-admin-success {
+  background: var(--success);
+  color: #fff;
+  border-radius: 8px;
+  padding: 12px 18px;
+  margin-bottom: 18px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hk-admin-warning {
+  background: var(--warning);
+  color: #fff;
+  border-radius: 8px;
+  padding: 12px 18px;
+  margin-bottom: 18px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hk-admin-danger {
+  background: var(--danger);
+  color: #fff;
+  border-radius: 8px;
+  padding: 12px 18px;
+  margin-bottom: 18px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hk-admin-section .dashicons {
+  font-size: 1.3em;
+  color: var(--primary-light);
+  vertical-align: middle;
+}
+
+.hk-admin-section input[type="checkbox"] {
+  accent-color: var(--primary);
+}
+
+.hk-admin-section input[type="number"]::-webkit-inner-spin-button,
+.hk-admin-section input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.hk-admin-section input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.hk-admin-section input:disabled,
+.hk-admin-section select:disabled {
+  background: #f3f4f6;
+  color: #b6b6b6;
+}
+
+.hk-admin-section .description {
+  color: var(--text-light);
+  font-size: 0.98rem;
+  margin-top: 4px;
+}
+
+/* Language List Grid */
+.hk-admin-section .hk-translate-languages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+/* Language Item Card */
+.hk-admin-section .hk-translate-language-item {
+  background: var(--secondary);
+  border-radius: 10px;
+  box-shadow: 0 1px 4px 0 rgba(30, 64, 175, 0.06);
+  padding: 10px 8px 8px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  border: 2px solid transparent;
+  position: relative;
+  transition: border 0.18s, box-shadow 0.18s, background 0.18s;
+  min-height: 70px;
+  user-select: none;
+}
+.hk-admin-section .hk-translate-language-item.selected {
+  border: 2px solid var(--primary);
+  background: #e8f0fe;
+  box-shadow: 0 2px 8px 0 rgba(37, 99, 235, 0.1);
+}
+.hk-admin-section .hk-translate-language-item:hover {
+  border: 2px solid var(--primary-light);
+  background: #f1f5ff;
+}
+.hk-admin-section .hk-translate-language-item input[type="checkbox"] {
+  display: none;
+}
+.hk-admin-section .hk-translate-language-item .hk-translate-flag {
+  width: 32px;
+  height: 22px;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px 0 rgba(30, 64, 175, 0.1);
+  margin-bottom: 4px;
+}
+.hk-admin-section .hk-translate-language-item .hk-translate-language-name {
+  font-size: 1.02em;
+  font-weight: 500;
+  color: var(--primary-dark);
+  text-align: center;
+  margin-bottom: 2px;
+}
+.hk-admin-section .hk-translate-language-item .hk-translate-language-code {
+  color: var(--text-light);
+  font-size: 0.93em;
+  text-align: center;
+}
+.hk-admin-section .hk-translate-language-item.selected::after {
+  content: "\2713";
+  position: absolute;
+  top: 7px;
+  right: 10px;
+  color: var(--primary);
+  font-size: 1.2em;
+  font-weight: bold;
+  background: #fff;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 4px 0 rgba(30, 64, 175, 0.1);
+}
+
+/* Selected Languages List */
+.hk-admin-section .hk-translate-selected-items {
+  margin-top: 10px;
+  min-height: 40px;
+}
+.hk-admin-section .hk-translate-selected-item {
+  background: var(--secondary);
+  border-radius: 8px;
+  padding: 8px 14px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 1px 4px 0 rgba(30, 64, 175, 0.06);
+  position: relative;
+  transition: box-shadow 0.18s, background 0.18s;
+  cursor: grab;
+  animation: fadeInSelected 0.25s;
+}
+.hk-admin-section .hk-translate-selected-item:active {
+  background: #e8f0fe;
+  box-shadow: 0 2px 8px 0 rgba(37, 99, 235, 0.1);
+}
+.hk-admin-section .hk-translate-selected-item .hk-translate-drag-handle {
+  cursor: grab;
+  color: var(--primary-light);
+  font-size: 1.3em;
+  margin-right: 6px;
+  transition: color 0.18s;
+}
+.hk-admin-section .hk-translate-selected-item:hover .hk-translate-drag-handle {
+  color: var(--primary-dark);
+}
+.hk-admin-section .hk-translate-selected-item .hk-translate-order-number {
+  background: var(--primary-light);
+  color: #fff;
+  font-size: 0.98em;
+  font-weight: 600;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 6px;
+  box-shadow: 0 1px 2px 0 rgba(30, 64, 175, 0.1);
+}
+.hk-admin-section .hk-translate-selected-item img {
+  width: 28px;
+  height: 20px;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px 0 rgba(30, 64, 175, 0.1);
+}
+.hk-admin-section .hk-translate-selected-item .hk-translate-lang-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.hk-admin-section .hk-translate-selected-item .hk-translate-lang-name {
+  font-weight: 500;
+  color: var(--primary-dark);
+  font-size: 1.01em;
+}
+.hk-admin-section .hk-translate-selected-item .hk-translate-lang-code {
+  color: var(--text-light);
+  font-size: 0.93em;
+}
+
+@keyframes fadeInSelected {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hk-admin-section .hk-translate-warning {
+  background: var(--warning);
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px 16px;
+  margin-top: 10px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hk-admin-section .hk-translate-preview-notice {
+  background: var(--info);
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px 16px;
+  margin-top: 10px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hk-admin-dark {
+  --background: #18181b;
+  --card-bg: #23232a;
+  --secondary: #23232a;
+  --border: #2d2d36;
+  --text: #f3f4f6;
+  --text-light: #a1a1aa;
+  --primary: #60a5fa;
+  --primary-dark: #2563eb;
+  --primary-light: #93c5fd;
+}
+
+body.hk-translate-admin.hk-admin-dark {
+  background: var(--background);
+  color: var(--text);
+}
+
+.hk-admin-section.hk-admin-dark {
+  background: var(--card-bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.hk-admin-section.hk-admin-dark .description {
+  color: var(--text-light);
+}
+
+.hk-admin-section.hk-admin-dark .hk-translate-selected-item {
+  background: #23232a;
+  color: var(--text);
+}
+
+.hk-admin-section.hk-admin-dark .hk-translate-lang-name {
+  color: var(--primary);
+}
+
+.hk-admin-section.hk-admin-dark .hk-translate-lang-code {
+  color: var(--text-light);
+}
+
+.hk-admin-section.hk-admin-dark .hk-translate-warning,
+.hk-admin-section.hk-admin-dark .hk-translate-preview-notice {
+  background: var(--primary-dark);
+  color: #fff;
+}
+
+/* Animations */
+.hk-admin-btn,
+.hk-admin-switch .hk-admin-slider:before {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* End of Modern Admin Panel Styles */

@@ -1,0 +1,417 @@
+/* HK Translate Frontend Styles */
+
+/* Google Translate varsayılan elemanlarını gizle */
+#goog-gt-tt,
+.goog-te-banner-frame,
+#google_translate_element2,
+.goog-te-banner-frame.skiptranslate,
+.goog-te-gadget-simple,
+.goog-te-menu-frame,
+.goog-te-ftab,
+.goog-te-balloon-frame,
+div#goog-gt-,
+div#goog-gt-tt,
+div#goog-gt-src,
+div#goog-gt-res {
+  display: none !important;
+}
+
+/* Google Translate barını tamamen gizle */
+.goog-te-banner-frame {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Üst barı gizle */
+.skiptranslate > iframe {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+}
+
+/* Google Translate iframe'ini gizle */
+iframe.goog-te-banner-frame {
+  display: none !important;
+}
+
+/* Sayfanın üst kısmındaki boşluğu kaldır */
+body {
+  top: 0 !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* HTML elementinin üst kısmındaki boşluğu kaldır */
+html {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.goog-te-menu-value:hover {
+  text-decoration: none !important;
+}
+
+.goog-text-highlight {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* RTL dil koruması - Sadece gerekli elementleri koru */
+.hk-translate-dropdown,
+.hk-translate-btn,
+.hk-translate-menu,
+.hk-translate-item {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* Site yapısını koruyan elementler */
+.site-header,
+.header,
+.main-header,
+.navbar,
+.top-bar,
+.header-wrapper,
+.site-logo,
+.logo,
+.header-logo,
+.navbar-brand,
+.main-logo,
+.site-branding,
+.custom-logo-link,
+.wp-custom-logo,
+.main-navigation,
+.primary-menu,
+.navbar-nav,
+.menu,
+.nav-menu,
+.site-footer,
+.footer,
+.main-footer {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* WordPress admin bar koruması */
+#wpadminbar,
+#wp-admin-bar-root-default {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* Yaygın tema class'ları koruması */
+.container,
+.row,
+.col,
+.content,
+.main-content,
+.sidebar,
+.widget,
+.entry-header,
+.entry-content,
+.entry-footer {
+  direction: inherit;
+  text-align: inherit;
+}
+
+/* Dropdown Container - SADECE BASE STYLE */
+.hk-translate-dropdown {
+  position: fixed;
+  z-index: 9999;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 14px;
+}
+
+/* Dropdown Button - Boyut ve görsel ayarlanabilir */
+.hk-translate-btn {
+  width: var(--hk-translate-desktop-size, 40px);
+  height: var(--hk-translate-desktop-size, 40px);
+  border-radius: var(--hk-translate-btn-radius, 50%);
+  background: var(--hk-translate-btn-bg, #fff);
+  border: var(--hk-translate-btn-border, 2px solid #ddd);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hk-translate-btn:hover {
+  border-color: var(--hk-translate-btn-hover-color, #007cba);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transform: scale(1.05);
+}
+
+.hk-translate-btn img {
+  width: calc(var(--hk-translate-desktop-size, 40px) - 8px);
+  height: calc(var(--hk-translate-desktop-size, 40px) - 8px);
+  border-radius: var(--hk-translate-btn-flag-radius, 50%);
+  object-fit: cover;
+}
+
+/* Dropdown Menu - Pozisyona göre açılan ve görsel ayarlanabilir */
+.hk-translate-menu {
+  position: absolute;
+  background: var(--hk-translate-menu-bg, #fff);
+  border: var(--hk-translate-menu-border, 1px solid #ddd);
+  border-radius: var(--hk-translate-menu-radius, 8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  z-index: 10000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  max-height: var(--hk-translate-menu-height, 250px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: var(--hk-translate-menu-width, 160px);
+  min-width: var(--hk-translate-menu-width, 160px);
+  white-space: nowrap;
+  /* Custom scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: #c1c1c1 transparent;
+}
+
+.hk-translate-menu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.hk-translate-menu::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.hk-translate-menu::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1;
+  border-radius: 3px;
+}
+
+.hk-translate-menu::-webkit-scrollbar-thumb:hover {
+  background-color: #a8a8a8;
+}
+
+/* ULTIMATE OPENING RULE - BASİT SİSTEM */
+.hk-translate-dropdown.open .hk-translate-menu {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+}
+
+/* COMPACT MODE - Sadece bayraklar, dil isimleri gizli */
+.hk-translate-dropdown.hk-translate-compact .hk-translate-item span {
+  display: none !important;
+}
+
+/* NTW COMPACT MODE - Navigation Translate Widget */
+.hk-translate-ntw-dropdown.hk-translate-ntw-compact
+  .hk-translate-ntw-item
+  span {
+  display: none !important;
+}
+
+.hk-translate-ntw-dropdown.hk-translate-ntw-compact .hk-translate-ntw-item {
+  padding: 8px 12px !important;
+  justify-content: center !important;
+}
+
+.hk-translate-ntw-dropdown.hk-translate-ntw-compact .hk-translate-ntw-menu {
+  min-width: auto !important;
+  width: auto !important;
+}
+
+.hk-translate-dropdown.hk-translate-compact .hk-translate-item {
+  padding: 8px 12px !important;
+  justify-content: center !important;
+}
+
+.hk-translate-dropdown.hk-translate-compact .hk-translate-menu {
+  min-width: auto !important;
+  width: auto !important;
+}
+
+/* Compact mode - responsive adjustments */
+@media (max-width: 768px) {
+  .hk-translate-dropdown.hk-translate-compact .hk-translate-item {
+    padding: 6px 10px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hk-translate-dropdown.hk-translate-compact .hk-translate-item {
+    padding: 4px 8px !important;
+  }
+}
+
+/* Menu Items - Bayrak ve dil adı, görsel ayarlanabilir */
+.hk-translate-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: var(--hk-translate-menu-text, #333);
+  transition: all 0.2s ease;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.hk-translate-item:first-child {
+  border-top-left-radius: var(--hk-translate-menu-radius, 8px);
+  border-top-right-radius: var(--hk-translate-menu-radius, 8px);
+}
+
+.hk-translate-item:last-child {
+  border-bottom: none;
+  border-bottom-left-radius: var(--hk-translate-menu-radius, 8px);
+  border-bottom-right-radius: var(--hk-translate-menu-radius, 8px);
+}
+
+.hk-translate-item:hover {
+  background: var(--hk-translate-menu-hover-bg, #0073aa) !important;
+  color: var(--hk-translate-menu-hover-text, #fff) !important;
+  transform: translateX(2px);
+}
+
+.hk-translate-item.active {
+  background: var(--hk-translate-menu-active-bg, #e7f3ff) !important;
+  color: var(--hk-translate-menu-active-text, #007cba) !important;
+  font-weight: 500;
+}
+
+.hk-translate-item img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  object-fit: cover;
+  border: 1px solid #eee;
+}
+
+.hk-translate-item span {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* Tablet Responsive - SADECE BUTON BOYUTU */
+@media (max-width: 768px) {
+  .hk-translate-btn {
+    width: var(--hk-translate-tablet-size, 36px);
+    height: var(--hk-translate-tablet-size, 36px);
+  }
+
+  .hk-translate-btn img {
+    width: calc(var(--hk-translate-tablet-size, 36px) - 8px);
+    height: calc(var(--hk-translate-tablet-size, 36px) - 8px);
+  }
+
+  .hk-translate-menu {
+    min-width: 140px;
+  }
+
+  .hk-translate-item {
+    padding: 10px 14px;
+  }
+
+  .hk-translate-item img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .hk-translate-item span {
+    font-size: 13px;
+  }
+}
+
+/* Mobile Responsive - SADECE BUTON BOYUTU */
+@media (max-width: 480px) {
+  .hk-translate-btn {
+    width: var(--hk-translate-mobile-size, 32px);
+    height: var(--hk-translate-mobile-size, 32px);
+  }
+
+  .hk-translate-btn img {
+    width: calc(var(--hk-translate-mobile-size, 32px) - 8px);
+    height: calc(var(--hk-translate-mobile-size, 32px) - 8px);
+  }
+
+  .hk-translate-menu {
+    min-width: 160px;
+  }
+
+  .hk-translate-item {
+    padding: 8px 12px;
+  }
+
+  .hk-translate-item img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .hk-translate-item span {
+    font-size: 12px;
+  }
+}
+/* RTL dil aktif olduğunda sadece gerekli elementleri koru */
+body.hk-translate-rtl-active .site-header,
+body.hk-translate-rtl-active .header,
+body.hk-translate-rtl-active .main-header,
+body.hk-translate-rtl-active .navbar,
+body.hk-translate-rtl-active .top-bar,
+body.hk-translate-rtl-active .header-wrapper,
+body.hk-translate-rtl-active .site-logo,
+body.hk-translate-rtl-active .logo,
+body.hk-translate-rtl-active .header-logo,
+body.hk-translate-rtl-active .navbar-brand,
+body.hk-translate-rtl-active .main-logo,
+body.hk-translate-rtl-active .site-branding,
+body.hk-translate-rtl-active .custom-logo-link,
+body.hk-translate-rtl-active .wp-custom-logo,
+body.hk-translate-rtl-active .main-navigation,
+body.hk-translate-rtl-active .primary-menu,
+body.hk-translate-rtl-active .navbar-nav,
+body.hk-translate-rtl-active .menu,
+body.hk-translate-rtl-active .nav-menu,
+body.hk-translate-rtl-active .site-footer,
+body.hk-translate-rtl-active .footer,
+body.hk-translate-rtl-active .main-footer,
+body.hk-translate-rtl-active #wpadminbar,
+body.hk-translate-rtl-active #wp-admin-bar-root-default {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* RTL aktif olduğunda çeviri widget'ını her zaman LTR tut */
+body.hk-translate-rtl-active .hk-translate-dropdown,
+body.hk-translate-rtl-active .hk-translate-btn,
+body.hk-translate-rtl-active .hk-translate-menu,
+body.hk-translate-rtl-active .hk-translate-item {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* RTL aktif olduğunda form elementlerini koru */
+body.hk-translate-rtl-active input,
+body.hk-translate-rtl-active textarea,
+body.hk-translate-rtl-active select,
+body.hk-translate-rtl-active button {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* RTL aktif olduğunda tablo yapısını koru */
+body.hk-translate-rtl-active table,
+body.hk-translate-rtl-active th,
+body.hk-translate-rtl-active td {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* NTW Menu Integration Styles - Only wrapper */
+.hk-translate-menu-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
